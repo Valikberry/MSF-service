@@ -1,0 +1,134 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap'); */
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+    background: #f9fafb;
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+}
+@keyframes change-slide {
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+    40%,
+    60% {
+        transform: translateX(calc(-100% - 1rem));
+    }
+    80%,
+    100% {
+        transform: translateX(calc(-200% - 2rem));
+    }
+}
+@keyframes nav1 {
+    0%,
+    20% {
+        opacity: 1;
+    }
+    40%,
+    60% {
+        opacity: 0.5;
+    }
+    80%,
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes nav2 {
+    0%,
+    20% {
+        opacity: 0.5;
+    }
+    40%,
+    60% {
+        opacity: 1;
+    }
+    80%,
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes nav3 {
+    0%,
+    20% {
+        opacity: 0.5;
+    }
+    40%,
+    60% {
+        opacity: 0.5;
+    }
+    80%,
+    100% {
+        opacity: 1;
+    }
+}
+.carousel__slides {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation-name: change-slide;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.carousel__slid {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.carousel__control {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.carousel__nav {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: black;
+    border-radius: 25px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#carousel__nav1 {
+    animation-name: nav1;
+}
+#carousel__nav2 {
+    animation-name: nav2;
+}
+#carousel__nav3 {
+    animation-name: nav3;
+}
+.carousel__nav {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.carousel__btn:checked ~ .carousel .carousel__slides,
+.carousel__btn:checked ~ .carousel .carousel__nav {
+    animation: none;
+}
+.carousel__nav:hover,
+#carousel__btn1:checked ~ .carousel #carousel__nav1,
+#carousel__btn2:checked ~ .carousel #carousel__nav2,
+#carousel__btn3:checked ~ .carousel #carousel__nav3 {
+    opacity: 1;
+}
+#carousel__btn1:checked ~ .carousel .carousel__slides {
+    transform: translateX(0);
+}
+#carousel__btn2:checked ~ .carousel .carousel__slides {
+    transform: translateX(-100%);
+}
+#carousel__btn3:checked ~ .carousel .carousel__slides {
+    transform: translateX(-200%);
+}
