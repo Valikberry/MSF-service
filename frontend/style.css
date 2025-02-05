@@ -35,7 +35,7 @@ main .container {
 .slider {
     display: block;
     width: 100%;
-    max-width: 660px;
+    max-width: 651px;
     margin: auto;
 }
 /* header */
@@ -328,13 +328,13 @@ main .container {
 .form_card_wp {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 16px;
 }
 .form_card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 12px;
+    gap: 6px;
     border-radius: 4px;
     background: #fff;
     box-shadow: 0px 0px 1px 0px rgba(12, 26, 75, 0.24),
@@ -350,7 +350,8 @@ main .container {
 }
 .form_card_img {
     width: 100%;
-    aspect-ratio: 175/152;
+    height: 152px;
+    /* aspect-ratio: 175/152; */
     border-radius: 4px 4px 0 0;
     overflow: hidden;
     object-fit: cover;
@@ -360,7 +361,7 @@ main .container {
 }
 .form_card_heading {
     color: #425466;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     margin-bottom: 8px;
     padding: 0px 8px;
@@ -424,7 +425,7 @@ main .container {
     background: transparent;
     text-align: center;
     color: white;
-    font-size: var(--fs14);
+    font-size: 12px;
     font-weight: 600;
     line-height: 24px;
 }
@@ -1105,7 +1106,7 @@ input[type='number'] {
     }
 }
 .form_card_price_wp p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .hide {
