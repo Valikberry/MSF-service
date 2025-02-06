@@ -29,18 +29,20 @@ body {
 }
 
 main .container {
-    padding-block: 25px;
+    /* padding-block: 45px;
+    margin-top: -25px; */
 }
 /* slider */
 .slider {
     display: block;
     width: 100%;
-    max-width: 651px;
+    max-width: 610px;
     margin: auto;
 }
 /* header */
 .slider_header {
     display: block;
+    
 }
 .back_btn {
     display: flex;
@@ -84,7 +86,7 @@ main .container {
 
     @media only screen and (min-width: 768px) {
         justify-content: end;
-        margin-bottom: 35px;
+        margin-bottom: 12px;
     }
 
     .cart-icon,
@@ -172,7 +174,7 @@ main .container {
     grid-template-columns: auto 1fr;
     gap: 20px;
     align-content: center;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 .step_txt {
     color: #344054;
