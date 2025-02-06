@@ -1349,16 +1349,19 @@ header {
     }
 
     .logo-area {
-        height: 47px;
+        height: 42px;
         display: flex;
         align-items: center;
         gap: 15px;
         text-decoration: none;
         width: max-content;
+        margin-left: 20px;
 
         img.site-logo {
             height: calc(100% - 10px);
             border-radius: 50%;
+            
+            
         }
 
         .site-name {
